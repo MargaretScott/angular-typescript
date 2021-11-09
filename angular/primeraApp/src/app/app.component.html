@@ -1,0 +1,47 @@
+<!-- <h1>Hola {{arrContactos[3].nombre}}</h1> -->
+<h1>Agenda de contactos</h1>
+
+<!-- cargueis el componente saludo que diga bienvenida y vuestro nombre, el nomnbre tiene que ser una propiedad del componente.-->
+
+<app-saludo name="Irene" surname="Del Castillo"></app-saludo>
+<!-- <app-saludo name="Juan" surname="Pérez"></app-saludo>
+<app-saludo name="Guillermo" surname="Moyano"></app-saludo> -->
+<section>
+  <div class="row">
+    <user-profile [name]="arrContactos[0].nombre" [phone]="arrContactos[0].telefono" [email]="arrContactos[0].email">
+    </user-profile>
+
+    <user-profile [name]="arrContactos[1].nombre" [phone]="arrContactos[1].telefono" [email]="arrContactos[1].email">
+    </user-profile>
+
+    <user-profile [name]="arrContactos[2].nombre" [phone]="arrContactos[2].telefono" [email]="arrContactos[2].email">
+    </user-profile>
+
+
+  </div>
+</section>
+<section>
+  <h1>Aqui hago las restas</h1>
+  <hr>
+  <app-resta [numero1]="7" [numero2]="5"></app-resta>
+  <app-resta [numero1]="27" [numero2]="25"></app-resta>
+  <app-resta [numero1]="num1" [numero2]="num2"></app-resta>
+
+  <app-resta [numero1]="arrNumeros[0]" [numero2]="arrNumeros[1]"></app-resta>
+
+</section>
+
+
+<section>
+  <h1>Cronometros</h1>
+  <hr>
+  <div>
+
+    <app-cronometro [inicio]="3" (terminaCrono)="onTerminaCrono($event)"></app-cronometro>
+  </div>
+  <div [class]="finalizado">
+    <app-cronometro [inicio]="estadoInicial" (terminaCrono)="onTerminaCrono($event)"></app-cronometro>
+  </div>
+
+
+</section>

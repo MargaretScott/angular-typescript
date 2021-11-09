@@ -1,0 +1,10 @@
+<div class="container">
+  <header>
+    <!-- formulario -->
+    <app-formulario (insertarAficion)="onInsertarAficion($event)"></app-formulario>
+  </header>
+  <main>
+    <!-- Lista aficiones -->
+    <app-lista-aficiones [listahobbies]="arrAficiones"></app-lista-aficiones>
+  </main>
+</div>

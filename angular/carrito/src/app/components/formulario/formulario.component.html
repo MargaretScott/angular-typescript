@@ -1,0 +1,18 @@
+<div class="form">
+  <!-- de momento no vamos a usar formulario, angular tiene su tema propio de formularios que explicaremos mas adelante -->
+  <div>
+    <label for="titulo">Titulo de producto</label>
+    <input type="text" id="titulo" placeholder="introduce un producto" [(ngModel)]="producto.titulo">
+  </div>
+
+  <div>
+    <label for="precio">Precio</label>
+    <input type="number" id="precio" placeholder="introduce un precio" [(ngModel)]="producto.precio">
+  </div>
+
+  <div>
+    <label for="cantidad">Cantidad</label>
+    <input type="number" id="cantidad" placeholder="introduce un cantidad" [(ngModel)]="producto.cantidad">
+  </div>
+  <button (click)="guardarProducto()"> Guardar producto</button>
+</div>

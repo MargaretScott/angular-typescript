@@ -1,0 +1,11 @@
+<div class="form">
+  <div>
+    <label for="hobbie">Hobbie</label>
+    <input type="text" id="hobbie" [(ngModel)]="nuevaAficion.hobbie">
+  </div>
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" [(ngModel)]="nuevaAficion.name">
+  </div>
+  <button (click)="guardarAficion()">Guardar</button>
+</div>

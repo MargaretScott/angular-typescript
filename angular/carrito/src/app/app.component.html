@@ -1,0 +1,16 @@
+<header>
+  <h3>Formulario de entrada</h3>
+  <!---  formulario -->
+  <app-formulario (productoSeleccionado)="onProductoSeleccionado($event)"></app-formulario>
+</header>
+<main>
+  <section>
+    <h1>Listado de productos</h1>
+    <app-lista-productos [listaproductos]="arrProducts"></app-lista-productos>
+  </section>
+  <hr>
+  <section>
+    <h4>Total de la compra</h4>
+    <app-total-compra [listaproductos]="arrProducts"></app-total-compra>
+  </section>
+</main>

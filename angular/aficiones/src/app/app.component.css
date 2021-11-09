@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container header {
+  width: 30%;
+  padding: 20px;
+  border-right: 1px solid black;
+}
+
+.container main {
+  width: 70%;
+  padding: 20px;
+}
