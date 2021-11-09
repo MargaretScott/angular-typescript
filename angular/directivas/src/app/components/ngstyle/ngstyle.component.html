@@ -1,0 +1,33 @@
+<input type="range" min="10" max="30" step="1" (input)="cambiarFuente($event)">
+<p [ngStyle]="{'background-color': color, 'color': otherColor, 'font-size': fontSize + 'px'  }">Lorem ipsum, dolor sit
+  amet
+  consectetur adipisicing
+  elit. In corporis quia
+  amet ex
+  assumenda deleniti
+  dicta
+  voluptatem, beatae eaque repudiandae voluptatum magnam aperiam quo numquam molestias ea fuga. Nam, repellat.</p>
+
+<hr>
+<input type="number" id="border" [(ngModel)]="borderWidth">
+
+<select id="color" [(ngModel)]="borderColor">
+  <option value="" selected>Selecciona un color</option>
+  <option value="blue">Azul</option>
+  <option value="green">Verde</option>
+  <option value="violet">Morado</option>
+</select>
+<button (click)="cambiarEstilo()">Cambiar Aspecto</button>
+
+<div>
+  <input placeholder="introduce un texto" type="text" (input)="cargarTexto($event)">
+
+  <select (change)="cargarTamanoFuente($event)">
+    <option value="" selected>Selecciona un tamaño de fuente</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+  </select>
+</div>
+
+<p [ngStyle]="estilosParrafo">{{ texto }}</p>
