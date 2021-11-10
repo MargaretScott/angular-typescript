@@ -1,0 +1,21 @@
+.notificaciones .alert {
+  background-color: tomato;
+  padding: 10px;
+  color: white;
+}
+
+.notificaciones .warning {
+  background-color: gold;
+  padding: 10px;
+  color: black;
+}
+
+.notificaciones .success {
+  background-color: green;
+  padding: 10px;
+  color: white;
+}
+
+body {
+  font-size: 200%;
+}

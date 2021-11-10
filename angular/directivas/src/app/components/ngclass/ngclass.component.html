@@ -1,0 +1,38 @@
+<p [ngClass]="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit minima eveniet non,
+  libero
+  quibusdam fugiat
+  autem veritatis possimus maxime odit et facilis amet provident expedita molestias deleniti laudantium ex natus
+  officiis numquam excepturi tempore quo? Rem ipsa praesentium aspernatur debitis maxime, ipsam quaerat dolore earum,
+  doloremque voluptatem commodi accusamus delectus.</p>
+<button (click)="cambiarPrimerParrafo()">Cambiar fondo</button>
+
+<p class="textoRojo fondoAzul">Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Reprehenderit minima
+  eveniet non,
+  libero
+  quibusdam fugiat
+  autem veritatis possimus maxime odit et facilis amet provident expedita molestias deleniti laudantium ex natus
+  officiis numquam excepturi tempore quo? Rem ipsa praesentium aspernatur debitis maxime, ipsam quaerat dolore earum,
+  doloremque voluptatem commodi accusamus delectus.</p>
+
+
+<p [ngClass]="['textoRojo', 'fondoAzul']" class="textoRojo fondoAzul">Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Reprehenderit minima
+  eveniet non,
+  libero
+  quibusdam fugiat
+  autem veritatis possimus maxime odit et facilis amet provident expedita molestias deleniti laudantium ex natus
+  officiis numquam excepturi tempore quo? Rem ipsa praesentium aspernatur debitis maxime, ipsam quaerat dolore earum,
+  doloremque voluptatem commodi accusamus delectus.</p>
+
+
+<p [ngClass]="{'fondoRojo':activo, 'fondoAzul': !activo}">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Reprehenderit minima
+  eveniet
+  non,
+  libero
+  quibusdam fugiat
+  autem veritatis possimus maxime odit et facilis amet provident expedita molestias deleniti laudantium ex natus
+  officiis numquam excepturi tempore quo? Rem ipsa praesentium aspernatur debitis maxime, ipsam quaerat dolore earum,
+  doloremque voluptatem commodi accusamus delectus.</p>
+<button (click)="cambiarTercerParrafo()"> cambiar Estado</button>

@@ -1,0 +1,27 @@
+header {
+  display: flex;
+}
+
+header .btn {
+  padding: 20px;
+  width: 50%;
+  display: block;
+  border: 0px;
+  margin: 10px;
+  background-color: tomato;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 150%;
+  transition: 0.5s;
+  color: white;
+}
+
+.form {
+  max-width: 800px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+}

@@ -1,0 +1,14 @@
+<div class="notificaciones" [ngSwitch]="totalProductos">
+  <p class="alert" *ngSwitchCase="0">No tienes producto, hay urgencia por renovar stock</p>
+  <p class="warning" *ngSwitchCase="5">Tienes 5 productos o menos</p>
+  <p class="success" *ngSwitchDefault>Hay suficiente stock</p>
+</div>
+<hr>
+
+
+<div class="notificaciones">
+  <p class="alert" *ngIf="totalProductos <= 0">No tienes producto, hay urgencia por renovar stock</p>
+  <p class="warning" *ngIf="totalProductos <= 5">Tienes 5 productos o menos</p>
+  <p class="success" *ngIf="totalProductos > 5">Hay suficiente stock</p>
+</div>
+<hr>

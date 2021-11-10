@@ -1,0 +1,25 @@
+<h1>Juego de tronos</h1>
+<section class="episiodios">
+  <h2>Episodios primera temporada</h2>
+
+  <select id="director" (change)="changeDirector($event)">
+    <option value="">Selecciona un director</option>
+    <option value="Tim Van Patten">Tim Van Patten</option>
+    <option value="Brian Kirk">Brian Kirk</option>
+    <option value="Daniel Minahan">Daniel Minahan</option>
+  </select>
+  <!-- ngFor se aplica sobre la superficie itarable, es decir sobre aquella que quiero repetir -->
+  <article [id]="'episodio_'+i" [ngClass]="{'impar': impar, 'par': par}"
+    *ngFor="let episodio of listaEpisodios; let i=index; let par= even; let impar= odd; let primer= first; let ultimo=  last">
+    <h3>{{i+1}} - {{episodio.title}}</h3>
+    <p>Director: {{episodio.director}}</p>
+    <p>PAR: {{par}}</p>
+    <p>IMPAR: {{impar}}</p>
+    <p>Primero: {{primer}}</p>
+    <p>Ultimo: {{ultimo}}</p>
+    <hr>
+  </article>
+
+
+
+</section>

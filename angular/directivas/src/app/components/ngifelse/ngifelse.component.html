@@ -1,0 +1,26 @@
+<button (click)="onClickBoton()">Mostrar Contenido</button>
+<!-- if else -->
+<div *ngIf="estado;  else elseBlock">
+  Este contenido sale con true
+</div>
+<ng-template #elseBlock>
+  <div>
+    Este contenido solo se ve si el estado es igual a false
+  </div>
+</ng-template>
+
+
+
+<!-- then else -->
+
+<!-- <div *ngIf="estado; then content  else elseBlock"></div>
+<ng-template #content>
+  <div>
+    Este contenido solo se ve si el estado es igual a true
+  </div>
+</ng-template>
+<ng-template #elseBlock>
+  <div>
+    Este contenido solo se ve si el estado es igual a false
+  </div>
+</ng-template> -->
