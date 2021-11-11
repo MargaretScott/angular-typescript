@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filtros',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
-  constructor() { }
+  @Output() prioridadEnviada: EventEmitter<string>;
+  @Output() busquedaEnviada: EventEmitter<string>;
+
+  constructor() {
+    this.busquedaEnviada = new EventEmitter();
+    this.prioridadEnviada = new EventEmitter();
+  }
 
   ngOnInit(): void {
   }
+
+  filtrarPrioridad($event: any): void {
+    let prioridad = $event.target.value;
+    this.prioridadEnviada.emit(prioridad);
+  }
+
+  capturaBusqueda($event: any): void {
+    let search = $event.target.value;
+    this.busquedaEnviada.emit(search);
+  }
+
 
 }

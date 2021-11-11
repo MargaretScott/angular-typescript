@@ -1,5 +1,5 @@
 <hr>
-<section>
+<!-- <section *ngIf="arrTareas.length !== 0">
 
   <article *ngFor="let tarea of arrTareas" class="p-3 d-flex justify-content-between mb-2"
     [ngClass]="{'bg-primary': tarea.priority=== 'diaria', 'bg-danger': tarea.priority === 'urgente', 'bg-success': tarea.priority === 'mensual'}">
@@ -8,3 +8,27 @@
   </article>
 
 </section>
+
+
+<section *ngIf="arrTareas.length === 0">
+  <article class="bg-secondary p-3 d-flex justify-content-between mb-2">
+    <h3>No hay tareas</h3>
+  </article>
+</section> -->
+<section *ngIf="arrTareas.length !== 0; else elseBlock">
+
+  <article *ngFor="let tarea of arrTareas" class="p-3 d-flex justify-content-between mb-2"
+    [ngClass]="{'bg-primary': tarea.priority=== 'diaria', 'bg-danger': tarea.priority === 'urgente', 'bg-success': tarea.priority === 'mensual'}">
+    <h3>{{tarea.title}} - <span>{{tarea.priority}}</span></h3>
+    <button class="btn text-black" (click)="delete(tarea.id)">Borrar</button>
+  </article>
+
+</section>
+
+<ng-template #elseBlock>
+  <section>
+    <article class="bg-secondary p-3 d-flex justify-content-between mb-2">
+      <h3>No hay tareas</h3>
+    </article>
+  </section>
+</ng-template>

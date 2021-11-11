@@ -2,11 +2,11 @@
   <header class="row">
     <!-- form -->
     <div class="col-6">
-      <app-formulario></app-formulario>
+      <app-formulario (nuevaTarea)="onInsertTarea($event)"></app-formulario>
     </div>
     <!-- filtros -->
     <div class="col-6">
-      <app-filtros></app-filtros>
+      <app-filtros (prioridadEnviada)="onFiltroPrioridad($event)" (busquedaEnviada)="onSearch($event)"></app-filtros>
     </div>
   </header>
   <main>

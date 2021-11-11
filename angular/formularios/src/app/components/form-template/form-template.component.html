@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h1>Form Template</h1>
+  <!-- para poder usar un formulario de tipo template necesito importar la libreria FormsModule -->
+  <form action="" #miFormulario="ngForm" (ngSubmit)="recogerDatos(miFormulario)">
+
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" class="form-control" placeholder="introduce tu nombre" name="name" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Apellidos</label>
+      <input type="text" id="surname" class="form-control" placeholder="introduce tus apellidos" ngModel name="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Email</label>
+      <input type="text" id="mail" class="form-control" placeholder="introduce tu email" ngModel name="mail">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Edad</label>
+      <input type="number" id="age" class="form-control" placeholder="introduce tu edad" ngModel name="age">
+    </div>
+
+    <input type="submit" class="btn btn-info mt-2" value="Enviar">
+  </form>
+
+</div>

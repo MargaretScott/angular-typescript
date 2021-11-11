@@ -1,1 +1,18 @@
-<p>formulario works!</p>
+<div class="form py-4">
+
+  <div class="my-1 form-group">
+    <label for="title" class="form-label">Titulo</label>
+    <input type="text" class="form-control" id="title" placeholder="introduce la tarea" [(ngModel)]="newTarea.title">
+  </div>
+  <div class="my-1 form-group">
+    <label for="priority" class="form-label">Prioridad</label>
+    <select id="priority" class="form-select" [(ngModel)]="newTarea.priority">
+      <option value="" selected>Selecciona una prioridad</option>
+      <option value="urgente">Urgente</option>
+      <option value="diaria">Diaria</option>
+      <option value="mensual">Mensual</option>
+    </select>
+  </div>
+  <button class="btn btn-secondary mt-2" (click)="guardarTarea()">GUARDAR</button>
+
+</div>

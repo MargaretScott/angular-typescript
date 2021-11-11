@@ -31,4 +31,15 @@ npm install bootstrap
         - Borrar del array.
 
 8 - formulario pasar la nueva prioridad que recojamos con el form al el padre y guardarla en el array.
+      - OUTPUT es el form el que tiene que emitir la nueva tarea al padre.
+      - Para recoger la informacion de un formulario usamos ngModel que importamos de FormsModule.
+
+
+9 - filtrar tareas por prioridad
+      - los filtros seran independientes aunque este en el mismo componente
+      - Selector que funcionará por change - evento. Me filtrará por cada prioridad y si no selecciono ninguna debera mostrar todas de nuevo.
+
+10 - buscador semantico
+
+11 - si cualquier filtro no me muestra ningun valor p mi array esta vacio, por que he borrado todas las tareas, me tien que pintar un mensaje de NO HAY TAREAS.
 

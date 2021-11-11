@@ -3,16 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ListaTareasComponent } from './components/lista-tareas/lista-tareas.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
-import { FiltrosComponent } from './components/filtros/filtros.component';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
+import { FormModelComponent } from './components/form-model/form-model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaTareasComponent,
-    FormularioComponent,
-    FiltrosComponent
+    FormTemplateComponent,
+    FormModelComponent
   ],
   imports: [
     BrowserModule,
