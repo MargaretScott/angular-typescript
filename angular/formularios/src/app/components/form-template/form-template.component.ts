@@ -14,6 +14,7 @@ export class FormTemplateComponent implements OnInit {
 
   recogerDatos(pForm: any) {
     console.log(pForm.value);
+    //guardar el elemento, enviarlo etc etc etc
     //para vaciar el formulario
     pForm.resetForm({});
   }

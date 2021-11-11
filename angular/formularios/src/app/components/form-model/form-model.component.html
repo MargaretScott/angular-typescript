@@ -1,1 +1,57 @@
-<p>form-model works!</p>
+<p>control nombre valido: {{ formulario.get('name')?.errors | json }}</p>
+<p>formulario: {{ formulario.valid }}</p>
+<div class="container mt-5">
+  <h1>Form tipo Model</h1>
+  <!-- para usar formulario de tipo model tenemos que cargar las libreria de ReactiveForm -->
+  <form novalidate [formGroup]="formulario" (ngSubmit)="recogerDatos()">
+    <div class="form-group">
+      <label for="name">Nombre (*)</label>
+      <input type="text" id="name" class="form-control" placeholder="introduce tu nombre" formControlName="name">
+      <p class="error" *ngIf="formulario.get('name')?.hasError('required') && formulario.get('name')?.touched">El campo
+        es requerido
+      </p>
+      <p class="error" *ngIf="formulario.get('name')?.hasError('minlength') && formulario.get('name')?.touched">El campo
+        tiene que
+        tener una longitud minima de 3</p>
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Apellidos</label>
+      <input type="text" id="surname" class="form-control" placeholder="introduce tus apellidos"
+        formControlName="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Email</label>
+      <input type="text" id="mail" class="form-control" placeholder="introduce tu email" formControlName="mail">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Edad</label>
+      <input type="number" id="age" class="form-control" placeholder="introduce tu edad" formControlName="age">
+    </div>
+
+
+    <div class="form-group">
+      <label for="dni">DNI</label>
+      <input type="text" id="dni" class="form-control" placeholder="introduce tu dni" formControlName="dni">
+    </div>
+
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="text" id="password" class="form-control" placeholder="introduce tu password"
+        formControlName="password">
+    </div>
+
+    <div class="form-group">
+      <label for="repitepassword">Repite Password </label>
+      <input type="text" id="repitepassword" class="form-control" placeholder="introduce de nuevo tu password"
+        formControlName="repitepassword">
+    </div>
+
+
+    <input type="submit" class="btn btn-warning mt-2" value="Enviar" [disabled]="!formulario.valid">
+  </form>
+
+</div>

@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <h1>Form Template</h1>
   <!-- para poder usar un formulario de tipo template necesito importar la libreria FormsModule -->
-  <form action="" #miFormulario="ngForm" (ngSubmit)="recogerDatos(miFormulario)">
+  <form #miFormulario="ngForm" (ngSubmit)="recogerDatos(miFormulario)">
 
     <div class="form-group">
       <label for="name">Nombre</label>
