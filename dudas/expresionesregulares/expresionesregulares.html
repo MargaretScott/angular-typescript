@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //expresion regular es un patron de texto que lo hace es evaluar una cadena de carecteres afanumerica y la compara con el patron. Si el dato cumple patron me devuelve true y si no lo cumple me devuelve false.
+
+
+        let animal = "LeÓn";
+
+        let expresion = /[áéíóúÁÉÍÓÚ]/;
+
+        let resultado = expresion.test(animal);
+        console.log(resultado);
+
+        //validar un email
+
+        let correo = 'juan@gmail.com';
+        let expresion2 = /\S+\@\S+\.\S+/;
+
+        let resultado2 = expresion2.test(correo);
+
+        console.log(resultado2);
+
+
+    </script>
+
+</body>
+
+</html>

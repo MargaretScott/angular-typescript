@@ -1,0 +1,11 @@
+<h2 class="my-3">Lista de empleados</h2>
+<section class="row g-4">
+
+  <!-- mi superfie iterable - donde desarrollare el ngFor -->
+  <article class="col-12 col-sm-6 col-md-4" *ngFor="let empleado of arrEmpleados">
+    <app-empleado [miEmpleado]="empleado"></app-empleado>
+  </article>
+
+
+
+</section>

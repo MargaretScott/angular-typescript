@@ -1,0 +1,47 @@
+<section>
+  <h2 class="my-3">Formulario Empleados</h2>
+
+  <form #formEmpleados="ngForm" (ngSubmit)="getDataForm(formEmpleados)">
+
+    <div class="form-group mb-3">
+      <label for="name">Nombre</label>
+      <input class="form-control" type="text" id="name" name="name" ngModel>
+    </div>
+
+
+    <div class="form-group mb-3">
+      <label for="surname">Apellidos</label>
+      <input class="form-control" type="text" id="surname" name="surname" ngModel>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="dni">DNI</label>
+      <input class="form-control" type="text" id="dni" name="dni" ngModel>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input class="form-control" type="text" id="email" name="email" ngModel>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="photo">Foto</label>
+      <input class="form-control" type="text" id="photo" name="photo" ngModel>
+    </div>
+
+
+    <div class="form-group mb-3">
+      <select name="department" ngModel class="form-select">
+        <option value="" selected>Selecciona un departamento</option>
+        <option value="contabilidad">Contabilidad</option>
+        <option value="marketing">Marketing</option>
+        <option value="direccion">Dirección</option>
+        <option value="desarrollo">Desarrollo</option>
+      </select>
+    </div>
+
+
+    <input type="submit" value="Guardar Empleado" class="btn btn-info">
+  </form>
+
+</section>

@@ -1,4 +1,5 @@
 <p>control nombre valido: {{ formulario.get('name')?.errors | json }}</p>
+<p>control edad valido: {{ formulario.get('age')?.errors | json }}</p>
 <p>formulario: {{ formulario.valid }}</p>
 <div class="container mt-5">
   <h1>Form tipo Model</h1>
@@ -7,10 +8,12 @@
     <div class="form-group">
       <label for="name">Nombre (*)</label>
       <input type="text" id="name" class="form-control" placeholder="introduce tu nombre" formControlName="name">
-      <p class="error" *ngIf="formulario.get('name')?.hasError('required') && formulario.get('name')?.touched">El campo
+
+      <p class="error" *ngIf="checkControl('name', 'required')">El campo
         es requerido
       </p>
-      <p class="error" *ngIf="formulario.get('name')?.hasError('minlength') && formulario.get('name')?.touched">El campo
+
+      <p class="error" *ngIf="checkControl('name', 'minlength')">El campo
         tiene que
         tener una longitud minima de 3</p>
     </div>
@@ -19,36 +22,57 @@
       <label for="surname">Apellidos</label>
       <input type="text" id="surname" class="form-control" placeholder="introduce tus apellidos"
         formControlName="surname">
+      <p class="error" *ngIf="checkControl('surname', 'required')">El
+        campo es requerido</p>
+
+      <p class="error" *ngIf="checkControl('surname', 'minlength')">El
+        campo
+        tiene que
+        tener una longitud minima de 7</p>
     </div>
 
     <div class="form-group">
       <label for="mail">Email</label>
       <input type="text" id="mail" class="form-control" placeholder="introduce tu email" formControlName="mail">
+      <p class="error" *ngIf="checkControl('mail', 'required')">El
+        campo es requerido</p>
+      <p class="error" *ngIf="checkControl('mail', 'pattern')">Por favor introduce un email valido</p>
     </div>
 
     <div class="form-group">
       <label for="age">Edad</label>
       <input type="number" id="age" class="form-control" placeholder="introduce tu edad" formControlName="age">
+
+      <p class="error" *ngIf="checkControl('age', 'edadvalidador')">La edad permitida es entre 18 y 65 años</p>
     </div>
 
 
     <div class="form-group">
       <label for="dni">DNI</label>
       <input type="text" id="dni" class="form-control" placeholder="introduce tu dni" formControlName="dni">
+
+      <p class="error" *ngIf="checkControl('dni', 'dnivalidador')">
+        {{ formulario.get('dni')?.errors?.['dnivalidador'] }}
+      </p>
+
     </div>
 
 
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="text" id="password" class="form-control" placeholder="introduce tu password"
+      <input type="password" id="password" class="form-control" placeholder="introduce tu password"
         formControlName="password">
+
+      <p class="error" *ngIf="checkControl('password', 'minlength')">Password tiene que tener 8 caracteres o mas</p>
     </div>
 
     <div class="form-group">
       <label for="repitepassword">Repite Password </label>
-      <input type="text" id="repitepassword" class="form-control" placeholder="introduce de nuevo tu password"
+      <input type="password" id="repitepassword" class="form-control" placeholder="introduce de nuevo tu password"
         formControlName="repitepassword">
     </div>
+
+    <p class="error" *ngIf="formulario.hasError('passwordvalidador')">Los dos campos de password no coinciden inutil</p>
 
 
     <input type="submit" class="btn btn-warning mt-2" value="Enviar" [disabled]="!formulario.valid">
