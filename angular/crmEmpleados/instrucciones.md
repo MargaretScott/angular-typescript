@@ -26,8 +26,14 @@
 
  ## Tarea 4
   
-  1 - cada empleado tendra un color de borde en funcion de si es empleado activo o no es empleado activo.
-  2 - cada empleado dentro de su ficha tiene un boton que permitirá activar o desactivar el empleado.
+   ✅  1 - cada empleado tendra un color de borde en funcion de si es empleado activo o no es empleado activo.
+   ✅  2 - cada empleado dentro de su ficha tiene un boton que permitirá activar o desactivar el empleado.
+
+## Tarea 5
+
+   ✅  1 - Crear un array de departamentos y pintarlos dentro del formulario, siguiendo el patron del interface creado de departamento.
+
+
 
 
 

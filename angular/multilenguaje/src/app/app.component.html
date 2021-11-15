@@ -1,0 +1,21 @@
+<header>
+  <!-- <ul class="menu">
+    <li [routerLink]="['/es']">Castellano</li>
+    <li [routerLink]="['/en']">Ingles</li>
+    <li [routerLink]="['/fr']">Frances</li>
+  </ul> -->
+
+  <ul class="menu">
+    <li [routerLink]="['/lang', 'es']">Castellano</li>
+    <li [routerLink]="['/lang', 'en']">Ingles</li>
+    <li [routerLink]="['/lang', 'fr']">Frances</li>
+  </ul>
+
+  <select (change)="cambiarIdioma($event)">
+    <option value="" selected>Seleccionar idioma</option>
+    <option value="es">Español</option>
+    <option value="en">Ingles</option>
+    <option value="fr">Frances</option>
+  </select>
+</header>
+<router-outlet></router-outlet>

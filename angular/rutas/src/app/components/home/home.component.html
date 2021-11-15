@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Home</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quos sit facere quibusdam recusandae facilis rerum
+    illo labore repellat laborum blanditiis unde quam doloribus sequi animi laudantium dolorem, aspernatur pariatur.</p>
+  <hr>
+  <section class="row">
+
+    <article class="col-12 col-md-4" *ngFor="let servicio of servicios">
+      <div class="card p-3">
+        <h3>{{servicio.nombre}}</h3>
+        <p>{{servicio.descripcion}}</p>
+        <a class="btn btn-primary" [routerLink]="['/services', servicio.url]">Leer más</a>
+      </div>
+    </article>
+
+
+  </section>
+
+
+</div>

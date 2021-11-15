@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Departamento } from 'src/app/interfaces/departamento.interface';
 import { Empleado } from 'src/app/interfaces/empleado.interface';
 
 @Component({
@@ -9,9 +10,28 @@ import { Empleado } from 'src/app/interfaces/empleado.interface';
 export class FormComponent implements OnInit {
 
   @Output() nuevoEmpleado: EventEmitter<Empleado>
-
+  arrDepartments: Departamento[];
   constructor() {
     this.nuevoEmpleado = new EventEmitter();
+
+    this.arrDepartments = new Array(
+      {
+        title: 'contabilidad',
+        numEmpleados: 50
+      },
+      {
+        title: 'marketing',
+        numEmpleados: 30
+      },
+      {
+        title: 'dirección',
+        numEmpleados: 10
+      },
+      {
+        title: 'desarrollo',
+        numEmpleados: 150
+      }
+    )
   }
 
   ngOnInit(): void {

@@ -24,4 +24,8 @@ export class EmpleadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cambiarEstado(pEmpleado: Empleado): void {
+    pEmpleado.status = !pEmpleado.status;
+  }
+
 }
