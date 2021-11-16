@@ -10,6 +10,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
+import { VistaProductoComponent } from './components/vista-producto/vista-producto.component';
+import { RelacionadosComponent } from './components/vista-producto/relacionados/relacionados.component';
+import { EspecificacionesComponent } from './components/vista-producto/especificaciones/especificaciones.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ServicesComponent } from './components/services/services.component';
     AboutComponent,
     ContactComponent,
     ProductsComponent,
-    ServicesComponent
+    ServicesComponent,
+    VistaProductoComponent,
+    RelacionadosComponent,
+    EspecificacionesComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
+import { EspecificacionesComponent } from './components/vista-producto/especificaciones/especificaciones.component';
+import { RelacionadosComponent } from './components/vista-producto/relacionados/relacionados.component';
+import { VistaProductoComponent } from './components/vista-producto/vista-producto.component';
 
 const routes: Routes = [
   /* { path: "", component: HomeComponent },*/
@@ -13,6 +16,14 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "about", component: AboutComponent },
   { path: 'products', component: ProductsComponent },
+  {
+    path: 'product/:id', component: VistaProductoComponent, children:
+      [
+        { path: '', component: EspecificacionesComponent },
+        { path: 'relacionados', component: RelacionadosComponent },
+        { path: 'especificaciones', component: EspecificacionesComponent },
+      ]
+  },
   { path: 'services/:slug', component: ServicesComponent },
   { path: '**', redirectTo: '/home' }
 ];

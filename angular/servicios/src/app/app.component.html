@@ -1,0 +1,25 @@
+<div class="container">
+  <form #formulario="ngForm" (ngSubmit)="recogerDatos(formulario)">
+    <div class="my-2">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" name="nombre" ngModel>
+    </div>
+
+    <div class="my-2">
+      <label for="edad">Edad</label>
+      <input type="number" class="form-control" name="edad" ngModel>
+    </div>
+
+    <div class="my-2">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" name="email" ngModel>
+    </div>
+
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+
+
+
+<hr>
+<app-lista-alumnos></app-lista-alumnos>

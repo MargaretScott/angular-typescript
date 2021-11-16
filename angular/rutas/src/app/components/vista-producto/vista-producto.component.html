@@ -1,0 +1,19 @@
+<section class="container mt-5">
+  <h1>{{producto?.title}}</h1>
+  <div>
+    <p>Precio: {{producto?.price}} </p>
+    <p [ngClass]="{'stock':producto?.stock, 'sinstock': !producto?.stock}">
+      {{ (producto?.stock)? 'Hay stock' : 'Sin Stock' }}
+    </p>
+  </div>
+
+  <ul class="d-flex">
+    <li class="btn btn-primary m-2" [routerLink]="['/product', producto?.id, 'especificaciones']">Especificaciones</li>
+    <li class="btn btn-primary m-2" [routerLink]="['/product', producto?.id, 'relacionados']">Relacionados</li>
+  </ul>
+  <!-- siempre que haya rutas hijas necesitamos de un router-outlet especifico para dichas rutas -->
+  <div class=" border-2">
+    <router-outlet></router-outlet>
+  </div>
+
+</section>

@@ -7,6 +7,7 @@
       <article *ngFor="let product of arrProductsStock">
         <h3>{{product.title}}</h3>
         <p>Precio: {{product.price}} </p>
+        <a class="btn btn-primary mb-5" [routerLink]="['/product', product.id]">Ver producto</a>
       </article>
 
 
@@ -19,6 +20,7 @@
       <article *ngFor="let product of arrProductsSinStock">
         <h3>{{product.title}}</h3>
         <p>Precio: {{product.price}} </p>
+        <a class="btn btn-primary mb-5" [routerLink]="['/product', product.id]">Ver producto</a>
       </article>
 
 

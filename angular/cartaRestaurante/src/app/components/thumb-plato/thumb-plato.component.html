@@ -1,0 +1,6 @@
+<div class="p-4 bg-secondary mt-2">
+  <h3 class="text-white">{{plato?.title}}
+    <span class="text-black mx-5">Precio: {{plato?.price}} €</span>
+    <a [routerLink]="['/carta', plato?.id]" class="btn btn-warning">Leer más</a>
+  </h3>
+</div>
