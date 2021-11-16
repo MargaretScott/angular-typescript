@@ -1,1 +1,33 @@
-<p>lista-alumnos works!</p>
+<!-- filtros por edad -->
+<div class="container">
+  <h3>Filtros</h3>
+  <form #filtros="ngForm" (ngSubmit)="recogerFiltros(filtros); filtros.resetForm()">
+    <div>
+      <input class="form-control" placeholder="Introduce edad minima" type="number" min="0" max="100" name="edadmin"
+        ngModel>
+    </div>
+    <div class="my-2">
+      <input class="form-control" placeholder="Introduce edad maxima" type="number" min="0" max="100" name="edadmax"
+        ngModel>
+    </div>
+    <input class="btn btn-warning mb-2" type="submit" value="filtrar">
+
+  </form>
+  <button class="btn btn-warning mb-2" (click)="mostrarTodos()">Mostrar todos</button>
+</div>
+
+
+<section class="container" *ngIf="arrAlumnos.length === 0">
+  <article class="bg-dark text-white p-3">
+    <h6>NO HAY ALUMNOS INSCRITOS EN LA ESCUELA</h6>
+  </article>
+</section>
+
+<section class="container" *ngIf="arrAlumnos.length !== 0">
+  <!-- puedo hacer ngFor para pintar mi array-->
+  <article class="bg-dark text-white p-3 m-2" *ngFor="let alumno of arrAlumnos">
+    <h6>{{alumno.nombre}}</h6>
+    <p>Edad: {{ alumno.edad }}</p>
+    <a [href]="'mailto:' + alumno.email" class="btn btn-warning">{{alumno.email}}</a>
+  </article>
+</section>

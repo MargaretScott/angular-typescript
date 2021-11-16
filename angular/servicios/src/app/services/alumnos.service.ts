@@ -17,7 +17,14 @@ export class AlumnosService {
       this.arrAlumnos.push(pStudent);
       console.log('servicio', this.arrAlumnos);
     }
+  }
 
+  getAll(): Alumno[] {
+    return this.arrAlumnos;
+  }
+
+  getByAge(pFiltros: any): Alumno[] {
+    return this.arrAlumnos.filter(alumno => alumno.edad >= pFiltros.edadmin && alumno.edad <= pFiltros.edadmax);
   }
 
 

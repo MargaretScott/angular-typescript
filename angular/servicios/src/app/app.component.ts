@@ -17,6 +17,7 @@ export class AppComponent {
 
     this.alumno = formulario.value;
     this.alumnosService.addStudent(this.alumno);
+    formulario.resetForm();
   }
 
 
