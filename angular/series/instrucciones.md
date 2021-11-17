@@ -2,17 +2,17 @@
 
   - Rutas:
 
-  /series -> listaSeries  (Ojo! en este componente también va haber estar el componente filtros donde van a estar los filtros que hemos dispuesto en el dibujo.)
+  ✅ /series -> listaSeries  (Ojo! en este componente también va haber estar el componente filtros donde van a estar los filtros que hemos dispuesto en el dibujo.)
   
-  /series/IDSERIE -> DetalleSeries
+  ✅ /series/IDSERIE -> DetalleSeries
 
-  1 - Creación de rutas y componentes (de momento descritos, a lo mejor creamos más).
+  ✅ 1 - Creación de rutas y componentes (de momento descritos, a lo mejor creamos más).
 
-  2 - ¿Necesitamos interfaces ? ¿Dónde las genero? ¿Como los relaciono con los datos?
+  ✅ 2 - ¿Necesitamos interfaces ? ¿Dónde las genero? ¿Como los relaciono con los datos?
 
-  3 - Generamos un servicio con un metodo que nos recupere todas las series.
+  ✅  3 - Generamos un servicio series con un metodo que nos recupere todas las series.
 
-  4 - En la listaSeries recuperamos todas las series y las mostramos de manera BONITA.
+   ✅ 4 - En la listaSeries recuperamos todas las series y las mostramos de manera BONITA.
 
   5 - generamos el componente filtros y pensamos en la comunicacion de dicho componente. input o outputs o a traves del servicio.
 
@@ -22,13 +22,13 @@
 
 Voy a cargar DetalleSeries 
 
-  1 - Recuperar el valor de la ruta variable URL (ActivatedRoute)
+  ✅  1 - Recuperar el valor de la ruta variable URL (ActivatedRoute)
 
-  2 - Crear en el servicio un metodo que me retorne UNA UNICA sere por ID. (getById)
+   ✅  2 - Crear en el servicio un metodo que me retorne UNA UNICA sere por ID. (getById)
 
-  3 - Dentro del detalle mostrar dicha serie con la maquetacion que querais.
+   ✅  3 - Dentro del detalle mostrar dicha serie con la maquetacion que querais.
 
-  4 - Desde listado de series poner un boton que nos permita navegar hasta al ruta de series por id, cada card tendra su boton y su id.
+   ✅  4 - Desde listado de series poner un boton que nos permita navegar hasta al ruta de series por id, cada card tendra su boton y su id.
 
   5 - Crear componente temporadas, con texto plano y generar un par de botones que permitan navegar entre temporas y personajes dentro del detalle serie. (rutas hijas)
 

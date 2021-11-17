@@ -1,0 +1,21 @@
+<section class="container mt-5">
+  <div class="row g-4">
+    <div class="col-12 col-md-3 p-3 filtros">
+      <!-- filtros  -->
+      <app-filters (busqueda)="onBusqueda($event)" (rating)="onRating($event)"></app-filters>
+    </div>
+    <div class="col-12 col-md-9 p-3 series">
+      <!-- lista series  -->
+      <div class="row g-4">
+        <article class="col-6 col-md-4" *ngFor="let serie of arrSeries">
+          <app-thumb-serie [miserie]="serie"></app-thumb-serie>
+        </article>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</section>

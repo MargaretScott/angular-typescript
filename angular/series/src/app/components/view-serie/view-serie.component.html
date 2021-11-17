@@ -1,0 +1,25 @@
+<section class="container mt-5">
+  <div *ngIf="miSerie">
+    <div class="d-flex justify-content-between">
+      <h1>{{miSerie?.titulo}}</h1>
+      <button [routerLink]="['/series']" class="btn btn-primary">Volver a listado</button>
+    </div>
+    <hr>
+    <div class="row">
+      <figure class="col-12 col-md-4">
+        <img class="img-fluid" [src]="miSerie?.imagen" [alt]="miSerie?.titulo">
+      </figure>
+      <div class="col-12 col-md-8">
+        <ul>
+          <li>Creador: {{miSerie?.creador}}</li>
+          <li>Fecha: {{miSerie?.fechas}}</li>
+          <li>Puntuacion: {{miSerie?.rating}}</li>
+          <li>Canal: {{miSerie?.canal}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!miSerie">
+    <h1>La serie que buscas no existe</h1>
+  </div>
+</section>

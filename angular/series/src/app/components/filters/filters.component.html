@@ -1,0 +1,12 @@
+<aside class="my-3">
+  <label for="titulo">Busqueda por titulo</label>
+  <input type="text" class="form-control" placeholder="introduce el titulo a buscar"
+    (input)="recogerDatoBusqueda($event)">
+</aside>
+
+<aside class="my-3">
+  <label for="titulo">Puntuacion mayor que</label>
+  <input type="number" min="0" max="10" class="form-control" placeholder="introduce una puntuación"
+    [(ngModel)]="puntuacion">
+  <button (click)="recogerDatoRating()" class="btn btn-primary mt-2">Filtrar</button>
+</aside>

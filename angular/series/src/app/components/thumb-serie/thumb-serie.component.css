@@ -1,0 +1,16 @@
+.card {
+  min-height: 600px;
+  position: relative;
+}
+
+.card a {
+  width: 87%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.card .imagen {
+  height: 350px;
+  background-size: cover;
+  background-position: center bottom;
+}

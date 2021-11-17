@@ -12,4 +12,23 @@ export class SeriesService {
   constructor() {
     this.arrSeries = SERIES;
   }
+
+  getAll(): Serie[] {
+    return this.arrSeries;
+  }
+
+  getById(pId: number): Serie | undefined {
+    return this.arrSeries.find(serie => serie.id === pId)
+  }
+
+  getByTitle(pTitle: string): Serie[] {
+    return this.arrSeries.filter(serie => serie.titulo.toLowerCase().includes(pTitle.toLowerCase()))
+  }
+
+  getByRating(pRating: number): Serie[] {
+    return this.arrSeries.filter(serie => serie.rating >= pRating);
+  }
+
+
+
 }
