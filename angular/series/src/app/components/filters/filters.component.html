@@ -10,3 +10,11 @@
     [(ngModel)]="puntuacion">
   <button (click)="recogerDatoRating()" class="btn btn-primary mt-2">Filtrar</button>
 </aside>
+
+<aside class="my-3">
+  <label for="titulo">Puntuacion mayor que</label>
+  <select class="form-select" (change)="recogerDatosCanal($event)">
+    <option value="" selected>Selecciona el canal que emite</option>
+    <option [value]="canal" *ngFor="let canal of arrCanales">{{canal}}</option>
+  </select>
+</aside>

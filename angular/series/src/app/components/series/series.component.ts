@@ -24,4 +24,8 @@ export class SeriesComponent implements OnInit {
     this.arrSeries = this.seriesService.getByRating($event)
   }
 
+  onCanal($event: string) {
+    this.arrSeries = this.seriesService.getByCanal($event);
+  }
+
 }

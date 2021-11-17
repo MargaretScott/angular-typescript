@@ -16,8 +16,21 @@
           <li>Puntuacion: {{miSerie?.rating}}</li>
           <li>Canal: {{miSerie?.canal}}</li>
         </ul>
+        <hr>
+        <div class="btn-group">
+          <a routerLinkActive="active" [routerLink]="['/serie', miSerie?.id, 'personajes']"
+            class="btn btn-primary">Personajes</a>
+          <a routerLinkActive="active" [routerLink]="['/serie', miSerie?.id,  'temporadas']"
+            class="btn btn-primary">Temporadas</a>
+
+        </div>
+        <div>
+          <router-outlet></router-outlet>
+          <!-- router-outlet carga debajo del el el componente que este definido en la ruta. Cuando el router-outlet esta dentro de un componente que ya tiene ruta significa que tiene rutas hijas (children)-->
+        </div>
       </div>
     </div>
+
   </div>
   <div *ngIf="!miSerie">
     <h1>La serie que buscas no existe</h1>

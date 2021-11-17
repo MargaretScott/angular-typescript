@@ -29,6 +29,40 @@ export class SeriesService {
     return this.arrSeries.filter(serie => serie.rating >= pRating);
   }
 
+  getByCanal(pCanal: string): Serie[] {
+    if (pCanal !== "") {
+      return this.arrSeries.filter(serie => serie.canal === pCanal);
+    } else {
+      return this.arrSeries;
+    }
+
+  }
+
+
+  getAllChannel(): string[] {
+
+    let canales = this.arrSeries.map(serie => serie.canal);
+    //[...new Set[array]] elimina los elementos duplicados de un array
+    canales = [...new Set(canales)]
+    return canales;
+
+  }
+
+  getSeasonsById(pId: number): any[] {
+
+    let temporadas = new Array();
+
+    this.arrSeries.forEach(serie => {
+      if (serie.id === pId) {
+        //esta es mi serie
+        temporadas = serie.temporadas
+      }
+    })
+
+    return temporadas
+  }
+
+
 
 
 }

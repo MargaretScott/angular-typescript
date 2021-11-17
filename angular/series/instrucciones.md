@@ -14,7 +14,7 @@
 
    ✅ 4 - En la listaSeries recuperamos todas las series y las mostramos de manera BONITA.
 
-  5 - generamos el componente filtros y pensamos en la comunicacion de dicho componente. input o outputs o a traves del servicio.
+ ✅  5 - generamos el componente filtros y pensamos en la comunicacion de dicho componente. input o outputs o a traves del servicio.
 
 /series/8
 /series/1
@@ -40,16 +40,16 @@ Voy a cargar DetalleSeries
 /series/3/personajes
 
 
-  1 - creamos el componente listaPersonajes
+ ✅  1 - creamos el componente listaPersonajes
 
-  2 - Generamos un ruta hija a partir de /series/:idserie
+ ✅  2 - Generamos un ruta hija a partir de /series/:idserie
 
-  3 - Creeis un nuevo servicio para los personajes y separarlo del de series.
+ ✅  3 - Creeis un nuevo servicio para los personajes y separarlo del de series.
   
   4 -  Metodo en el servicio para obtener los personajes por id de serie. Los personajes de cada serie
 
-  5 - Dentro de listapersonajesComponent necesito recuperar el ID de la serie 
+  ✅  5 - Dentro de listapersonajesComponent necesito recuperar el ID de la serie 
 (ActivatedRoute  + parent)
 
 
-//filtros
+ ✅  //filtros

@@ -8,6 +8,8 @@ import { SeriesComponent } from './components/series/series.component';
 import { ViewSerieComponent } from './components/view-serie/view-serie.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { ThumbSerieComponent } from './components/thumb-serie/thumb-serie.component';
+import { PersonajesComponent } from './components/view-serie/personajes/personajes.component';
+import { TemporadasComponent } from './components/view-serie/temporadas/temporadas.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ThumbSerieComponent } from './components/thumb-serie/thumb-serie.compon
     SeriesComponent,
     ViewSerieComponent,
     FiltersComponent,
-    ThumbSerieComponent
+    ThumbSerieComponent,
+    PersonajesComponent,
+    TemporadasComponent
   ],
   imports: [
     BrowserModule,
