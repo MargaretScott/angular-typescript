@@ -1,0 +1,7 @@
+.navbar-brand {
+  max-width: 150px;
+}
+
+.navbar {
+  border-bottom: 2px solid tomato;
+}
