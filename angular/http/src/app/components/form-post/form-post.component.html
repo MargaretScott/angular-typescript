@@ -1,1 +1,17 @@
-<p>form-post works!</p>
+<section class="container">
+  <h2>{{title}} Post</h2>
+  <form [formGroup]="formPost" (ngSubmit)="getDataForm()">
+    <div class="my-2">
+      <label for="title">Titulo (*)</label>
+      <input type="text" id="title" class="form-control" formControlName="title">
+    </div>
+
+    <div class="my-2">
+      <label for="body">Cuerpo de texto (*)</label>
+      <textarea id="body" cols="30" rows="10" class="form-control" formControlName="body"></textarea>
+    </div>
+
+    <input type="submit" class="btn btn-info" value="Publicar">
+  </form>
+
+</section>

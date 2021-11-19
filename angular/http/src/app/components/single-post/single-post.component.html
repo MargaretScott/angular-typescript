@@ -1,1 +1,9 @@
-<p>single-post works!</p>
+<section class="container mt-5">
+  <div class="card p-4">
+    <h2 class="card-title">{{miPost?.id}} - {{miPost?.title}}</h2>
+    <div class="card-body">
+      {{ miPost?.body }}
+    </div>
+    <a class="btn btn-info" [routerLink]="['/home']">Volver a blog</a>
+  </div>
+</section>

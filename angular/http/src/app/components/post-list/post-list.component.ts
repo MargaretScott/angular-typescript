@@ -9,7 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostListComponent implements OnInit {
 
-
+  alertDelete: boolean = false;
   arrPost: Post[] = new Array();
   constructor(
     private postsService: PostsService
@@ -53,5 +53,17 @@ export class PostListComponent implements OnInit {
   //   })
 
   // }
+
+  async capturarIdBorrar(pId: number | undefined) {
+    //llamo al servicio para que ejecute la accion de borrar del id que he recogido
+    const msg = await this.postsService.deleteById(pId);
+    if (msg) {
+      this.alertDelete = true;
+    }
+  }
+
+  quitarAlert() {
+    this.alertDelete = false;
+  }
 
 }
