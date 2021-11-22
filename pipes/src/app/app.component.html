@@ -1,0 +1,42 @@
+<p>{{ nombre }}</p>
+<p>{{ nombre | uppercase }}</p>
+<p>{{ nombre | lowercase }}</p>
+<p>{{ nombre.toLowerCase() }}</p>
+<p>{{ precio | currency: 'EUR'}}</p>
+<p>{{ porcentaje | percent:'2.2-5' }}</p> <!-- minNumeroEnteros:minNumeroFrac - maxNumeroFrac -->
+<p>{{ racional | number:'3.2-5' }}</p>
+
+<hr>
+
+<div>
+  {{ arrAlumnos | json }}
+</div>
+
+<hr>
+<p>Fecha actual: {{ fechaActual | date:'dd - MMM - yyyy HH:mm:ss' }}</p>
+
+<!--
+
+  Formato     Equivale              Salida
+----------  --------------------  --------------------------------
+short       M/d/yy h:mm a         6/15/15 9:03 AM
+medium      MMM d y h:mm:ss a     Jun 15 2015 9:03:01 AM
+long        MMMM d y h:mm:ss a z  June 15 2015 at 9:03:01 AM GMT+1
+shortDate   M/d/yy                6/15/15
+mediumDate  MMM d y               Jun 15 2015
+longDate    MMMM d y              June 15 2015
+fullDate    EEEE MMMM d y         Monday June 15 2015
+shortTime   h:mm a                9:03 AM
+mediumTime  h:mm:ss a             9:03:01 AM
+longTime    h:mm:ss a z           9:03:01 AM GMT+1
+fullTime    h:mm:ss a zzzz        9:03:01 AM GMT+01:00
+full        EEEE MMMM d y         Monday June 15 2015
+            h:mm:ss a zzzz        at 9:03:01 AM GMT+01:00
+
+
+-->
+<input type="range" min="0" [max]="arrAnimales.length" (input)="cambiarValor($event)">
+<hr>
+<p> {{ arrAnimales | slice: inicio: arrAnimales.length}}</p>
+
+<p>{{frase | capitalize}}</p>
