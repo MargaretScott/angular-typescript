@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
 import { PostsService } from 'src/app/services/posts.service';
@@ -21,8 +21,13 @@ export class FormPostComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) {
     this.formPost = new FormGroup({
-      title: new FormControl('', []),
-      body: new FormControl('', []),
+      title: new FormControl('', [
+        Validators.required,
+        Validators.minLength(15)
+      ]),
+      body: new FormControl('', [
+        Validators.required
+      ]),
       userId: new FormControl(this.usuario, []),
     }, [])
   }
@@ -39,8 +44,13 @@ export class FormPostComponent implements OnInit {
         this.post = await this.postsService.getById(parseInt(params['idpost']))
 
         this.formPost = new FormGroup({
-          title: new FormControl(this.post?.title, []),
-          body: new FormControl(this.post?.body, []),
+          title: new FormControl(this.post?.title, [
+            Validators.required,
+            Validators.minLength(15)
+          ]),
+          body: new FormControl(this.post?.body, [
+            Validators.required
+          ]),
           userId: new FormControl(this.post?.userId, []),
           id: new FormControl(this.post?.id, [])
         }, [])
@@ -73,8 +83,15 @@ export class FormPostComponent implements OnInit {
       this.router.navigate(['/home']);
     }
 
+  }
 
-
+  checkControl(pField: string, pValidator: string): boolean {
+    if (this.formPost.get(pField)?.hasError(pValidator) && this.formPost.get(pField)?.touched) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
 }

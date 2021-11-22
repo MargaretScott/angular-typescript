@@ -4,14 +4,18 @@
     <div class="my-2">
       <label for="title">Titulo (*)</label>
       <input type="text" id="title" class="form-control" formControlName="title">
+      <p class="text-danger" *ngIf="checkControl('title', 'required')">El campo es requirido</p>
+      <p class="text-danger" *ngIf="checkControl('title', 'minlength')">El campo tiene que tener longitud minima de 15
+        caracteres</p>
     </div>
 
     <div class="my-2">
       <label for="body">Cuerpo de texto (*)</label>
       <textarea id="body" cols="30" rows="10" class="form-control" formControlName="body"></textarea>
+      <p class="text-danger" *ngIf="checkControl('body', 'required')">El campo es requirido</p>
     </div>
 
-    <input type="submit" class="btn btn-info" value="Publicar">
+    <input type="submit" class="btn btn-info" value="Publicar" [disabled]="!formPost.valid">
   </form>
 
 </section>
