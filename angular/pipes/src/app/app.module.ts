@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { VueltaPipe } from './pipes/vuelta.pipe';
+import { RecortarStringsPipe } from './pipes/recortar-strings.pipe';
 registerLocaleData(localeEs, 'es');
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    VueltaPipe,
+    RecortarStringsPipe
   ],
   imports: [
     BrowserModule

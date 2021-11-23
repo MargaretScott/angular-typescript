@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   arrAnimales: string[];
   inicio: number = 0;
   frase: string = "en un lugar de la mancha";
-
+  descripcion: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quia enim asperiores harum eligendi explicabo laboriosam sequi totam aliquid minima, accusamus debitis magnam error incidunt consectetur et quaerat maiores labore. A corrupti rem minima voluptate laudantium hic sint repellendus labore, exercitationem, minus eos tenetur incidunt, in magnam voluptas vel animi dolores nam odio eum necessitatibus quidem molestiae mollitia ratione? Magni explicabo ea temporibus excepturi, fugiat commodi debitis facere consequuntur a modi natus provident dolores earum atque pariatur illo rerum quasi distinctio vitae voluptas optio vel, quae maiores necessitatibus. Quo cupiditate nisi quisquam possimus quas fugit aut officiis reprehenderit maxime deserunt! "
 
   constructor() {
     this.arrAlumnos = new Array(

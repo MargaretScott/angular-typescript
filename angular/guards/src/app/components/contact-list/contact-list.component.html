@@ -1,0 +1,12 @@
+<section class="container">
+  <h2>Agenda de contactos</h2>
+  <hr>
+  <div class="row">
+
+    <article class="col-12 col-md-6 col-lg-4" *ngFor="let contact of arrContacts">
+      <!-- para pasar el contacto de mi array uso un input -->
+      <app-contact-card [myContact]="contact"></app-contact-card>
+    </article>
+
+  </div>
+</section>

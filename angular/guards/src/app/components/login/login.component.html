@@ -1,0 +1,27 @@
+<section class="container">
+  <h1 class="text-center">Login de acceso</h1>
+  <hr>
+  <div class="card bg-light shadow">
+    <div class="p-4">
+      <form #loginForm="ngForm" (ngSubmit)="getDataForm(loginForm)">
+        <div class="mb-3">
+          <label for="email" class="small ms-2">Email</label>
+          <input id="email" type="text" class="form-control" placeholder="Introduce tu email" name="email" ngModel>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="small ms-2">Password</label>
+          <input id="password" type="password" class="form-control" placeholder="Introduce tu password" name="password"
+            ngModel>
+        </div>
+        <input type="submit" class="btn btn-danger w-100" value="Entrar">
+      </form>
+    </div>
+  </div>
+  <!-- alerta de bootstrap para pintar el error de acceso -->
+  <div *ngIf="err" class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+    <div>
+      <strong> {{message}}</strong>
+    </div>
+  </div>
+
+</section>

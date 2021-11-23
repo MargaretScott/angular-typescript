@@ -40,3 +40,13 @@ full        EEEE MMMM d y         Monday June 15 2015
 <p> {{ arrAnimales | slice: inicio: arrAnimales.length}}</p>
 
 <p>{{frase | capitalize}}</p>
+<p>{{ 'hola' | vuelta}}</p>
+
+
+<article>
+  <h2>Titulo de la noticia</h2>
+  <p>
+    {{ descripcion | recortarStrings:60 }}
+  </p>
+  <button>Leer más</button>
+</article>
