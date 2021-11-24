@@ -1,0 +1,31 @@
+@import 'variables';
+
+.infoCharacter{
+  border: 2px solid $blackColor;
+  padding: 20px;
+  height: auto;
+  h2{
+    margin: 20px 0;
+    text-decoration: underline;
+    font: {
+      size: $fontSize * 2;
+      weight: 700;
+    }
+  }
+  ul li{
+    font-size: $fontSize * 1.2;
+    span{
+      font-weight: 700;
+    }
+  }
+
+  .muerto{
+    color: tomato
+  }
+  .vivo{
+    color: green
+  }
+  .desconocido{
+    color: gold
+  }
+}
