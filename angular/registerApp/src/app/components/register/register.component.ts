@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
 
@@ -42,7 +42,17 @@ export class RegisterComponent implements OnInit {
       ]),
       repitepassword: new FormControl('', []),
 
-    }, [])
+    }, [this.passwordValidator])
+  }
+
+  passwordValidator(form: AbstractControl): any {
+    const pass = form.get('password')?.value;
+    const repitePass = form.get('repitepassword')?.value;
+    if (pass === repitePass) {
+      return null
+    } else {
+      return { passwordValidator: true }
+    }
   }
 
   ngOnInit(): void {
@@ -55,6 +65,16 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['/login']);
     } else {
       alert('Error al generar el registro, intentelo de nuevo');
+    }
+
+  }
+
+  checkControl(pControlName: string, pError: string): boolean {
+
+    if (this.registerForm.get(pControlName)?.hasError(pError) && this.registerForm.get(pControlName)?.touched) {
+      return true;
+    } else {
+      return false;
     }
 
   }

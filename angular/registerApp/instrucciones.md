@@ -1,10 +1,10 @@
 ### Registro y Login.
     - vamos a tener que crear una webapp que me permite registrarme en un servidor, una vez que me register me tendré que logar con user y password que haya determinado.
 
-    ruta del server  https://f7bf-88-7-197-245.ngrok.io
+    ruta del server  http://c595-88-7-197-245.ngrok.io
 
     para registrarse tendreis que hacer una peticion post a la siguiente ruta
-            http://f7bf-88-7-197-245.ngrok.io/register
+            http://c595-88-7-197-245.ngrok.io/register
     Le tendreis que pasar un objeto de tipo Usuario con lo siguientes campos 
             id,  name, surname, username, password, mail, address, age 
    
@@ -23,7 +23,7 @@
 
     - Si es ok redirecionareis a login para hacer el proceso de logeo.
          
-         POST http://f7bf-88-7-197-245.ngrok.io/login donde haremos peticion para obtener acceso
+         POST http://c595-88-7-197-245.ngrok.io/login donde haremos peticion para obtener acceso
         
          tendreis que enviar un objeto con username y password
             - dicho proceso si el usuario existe te devuelve un token y si no un erro
@@ -38,9 +38,13 @@
 
      - Con el token hareis una peticion enviando el token al servidor a la ruta
       
-      GET http://f7bf-88-7-197-245.ngrok.io/premio para poder ver el premio necesitais el token del login.
+      GET http://c595-88-7-197-245.ngrok.io/premio para poder ver el premio necesitais el token del login.
     tendreis que enviarle una cabecera httpOptions
-    headers user-token: token 
+    headers 
+    {
+      user-token: token
+    }
+     
 
     - Crear interface de Users
     - Crear componentes Login y Register.

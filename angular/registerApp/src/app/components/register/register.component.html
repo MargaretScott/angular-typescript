@@ -5,58 +5,59 @@
       <label for="name">Nombre</label>
       <input type="text" class="form-control" id="name" formControlName="name">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('name', 'required')" class="text-danger">Campo requerido</p>
     </div>
 
     <div>
       <label for="surname">Apellidos</label>
       <input type="text" class="form-control" id="surname" formControlName="surname">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('surname', 'required')" class="text-danger">Campo requerido</p>
     </div>
 
     <div>
       <label for="username">Usuario</label>
       <input type="text" class="form-control" id="username" formControlName="username">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('username', 'required')" class="text-danger">Campo requerido</p>
     </div>
 
     <div>
       <label for="mail">Email</label>
       <input type="text" class="form-control" id="mail" formControlName="mail">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
-      <p *ngIf="false" class="text-danger">Tiene que ser un email valido</p>
+      <p *ngIf="checkControl('mail', 'required')" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('mail', 'pattern')" class="text-danger">Tiene que ser un email valido</p>
     </div>
 
     <div>
       <label for="age">Edad</label>
       <input type="text" class="form-control" id="age" formControlName="age">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('age', 'required')" class="text-danger">Campo requerido</p>
     </div>
 
     <div>
       <label for="address">Direccion</label>
       <input type="text" class="form-control" id="address" formControlName="address">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('address', 'required')" class="text-danger">Campo requerido</p>
     </div>
 
     <div>
       <label for="password">Password</label>
-      <input type="text" class="form-control" id="password" formControlName="password">
+      <input type="password" class="form-control" id="password" formControlName="password">
 
-      <p *ngIf="false" class="text-danger">Campo requerido</p>
-      <p *ngIf="false" class="text-danger">El password tiene que tener longitud minima de 8</p>
+      <p *ngIf="checkControl('password', 'required')" class="text-danger">Campo requerido</p>
+      <p *ngIf="checkControl('password', 'minlength')" class="text-danger">El password tiene que tener longitud minima
+        de 8</p>
     </div>
 
     <div>
       <label for="repitepassword">Repite password</label>
-      <input type="text" class="form-control" id="repitepassword" formControlName="repitepassword">
+      <input type="password" class="form-control" id="repitepassword" formControlName="repitepassword">
 
-      <p *ngIf="false" class="text-danger">Los password tiene que ser iguales</p>
+      <p *ngIf="registerForm.hasError('passwordValidator')" class="text-danger">Los password tiene que ser iguales</p>
     </div>
 
     <input type="submit" value="Registrar" class="btn btn-danger mt-4" [disabled]="!registerForm.valid">
