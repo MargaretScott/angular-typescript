@@ -1,0 +1,11 @@
+agm-map {
+  width: 100%;
+  height: 700px;
+
+}
+
+
+.title {
+  color: tomato;
+  font-size: 80%;
+}
