@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-locations',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationsComponent implements OnInit {
 
-  constructor() { }
+  arrLocations: any[] = new Array;
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private charactersService: CharactersService
+  ) { }
 
   ngOnInit(): void {
+    this.activateRoute.parent?.params.subscribe(async params => {
+      let id = parseInt(params['idcharacter']);
+      const character = await this.charactersService.getById(id);
+      this.arrLocations.push(character.location);
+    })
   }
 
 }

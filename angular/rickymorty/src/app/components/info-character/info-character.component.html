@@ -16,6 +16,14 @@
       </ul>
     </div>
   </div>
-
+  <hr>
+  <div>
+    <nav>
+      <ul class="submenu">
+        <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'episodes']">Episodios</li>
+        <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'locations']">Localizaciones</li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
 </section>
-<router-outlet></router-outlet>
