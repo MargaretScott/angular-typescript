@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+
+    <div onclick="saludar(this)">Carolina</div>
+    <div id="boton">Adrian</div>
+
+    <!-- en angular 
+    
+        <div (click)="saludar($event)" >Estamos pasando el tipo de evento y del e tengo que sacar el objeto el target y el objeto la propiedad que visualizar </div>  
+    -->
+</body>
+
+<script>
+
+    let boton = document.querySelector('#boton');
+    boton.addEventListener('click', saludar2) //event handler una funcion que solo maneja eventos
+
+    function saludar(pDiv) {
+        //pDiv representa el objeto de html que lanza el evento.
+        console.log(pDiv.innerText)
+    }
+
+    function saludar2(e) { //como el $event
+        console.log(e.target.innerText); //$event.target.value
+    }
+
+</script>
+
+</html>

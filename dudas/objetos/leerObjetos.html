@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer objetos</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const arrAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                direccion: {
+                    calle: 'Gran via',
+                    numero: 32,
+                    cp: {
+                        numero: 28013,
+                        ciudad: 'Madrid'
+                    }
+                },
+                asignaturas: ['Matematicas', 'Lengua', 'Filosofia'],
+                apellidos: 'Perez',
+
+            },
+            {
+                nombre: 'Alicia',
+                direccion: {
+                    calle: 'Las Ramblas',
+                    numero: 17,
+                    cp: {
+                        numero: 08080,
+                        ciudad: ['Barcelona', 'Barna']
+                    }
+                },
+                asignaturas: ['Ingles', 'Filosofia', 'Fisica'],
+                apellidos: 'Rodriguez',
+
+            }
+
+        )
+
+        console.log(arrAlumnos);
+
+        console.log(arrAlumnos[0].nombre); //Juan
+        console.log(arrAlumnos[0]['nombre']) //Juan
+
+
+        console.log(arrAlumnos[1].direccion.cp.ciudad[1])
+        console.log(arrAlumnos[1].asignaturas[1]);
+
+    </script>
+
+</body>
+
+</html>
